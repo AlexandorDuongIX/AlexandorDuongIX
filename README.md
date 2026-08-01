@@ -28,7 +28,7 @@
   <p align="center">
     🎓 <b>Software Engineering Student</b> actively mastering modern tech stacks.<br>
     🔭 I’m currently building modern web applications.<br>
-    ⚡ <b>Focus:</b> Java, ASP.NET Core, and React.<br>
+    ⚡ <b>Focus:</b> Java and React.<br>
   </p>
 
   <br />
@@ -45,8 +45,6 @@
     <b>Backend:</b><br>
     <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
     <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot" />
-    <img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="ASP.NET Core" />
-    <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#" />
   </p>
 
   <!-- Frontend Badges -->
