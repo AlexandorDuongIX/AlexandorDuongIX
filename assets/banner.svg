@@ -1,0 +1,139 @@
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Cyberpunk grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f2937" stroke-width="1"/>
+      <path d="M 40 20 L 0 20 M 20 0 L 20 40" fill="none" stroke="#111827" stroke-width="0.5"/>
+    </pattern>
+    <!-- Blue glow filter -->
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Purple glow filter -->
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Typography matching Tokyo Night / Cyberpunk */
+    .text {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+    }
+    
+    .line1 { font-size: 38px; fill: #7aa2f7; } /* Tokyo Night blue */
+    .line2 { font-size: 24px; fill: #bb9af7; } /* Tokyo Night purple */
+    .line3 { font-size: 20px; fill: #2ac3de; } /* Tokyo Night cyan */
+    .tagline {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      fill: #a9b1d6; /* Tokyo Night foreground */
+      font-weight: 500;
+    }
+
+    /* Typing animation keyframes */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    
+    .typewriter-wrapper {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .l1 {
+      border-right: 3px solid #7aa2f7;
+      width: 0%;
+      animation: typing 2s steps(40, end) forwards, blink .75s step-end infinite;
+    }
+
+    .l2 {
+      width: 0%;
+      border-right: 3px solid transparent;
+      animation: typing 2s steps(40, end) 2.5s forwards, blink .75s step-end 2.5s infinite;
+    }
+
+    .l3 {
+      width: 0%;
+      border-right: 3px solid transparent;
+      animation: typing 2s steps(40, end) 5s forwards, blink .75s step-end 5s infinite;
+    }
+
+    /* Stop previous cursors blinking */
+    @keyframes remove-cursor {
+      to { border-right-color: transparent; }
+    }
+    
+    .l1 { animation: typing 2s steps(40, end) forwards, blink .75s step-end infinite, remove-cursor 0s 2.5s forwards; }
+    .l2 { animation: typing 2s steps(40, end) 2.5s forwards, blink .75s step-end 2.5s infinite, remove-cursor 0s 5s forwards; }
+    .l3 { animation: typing 2s steps(40, end) 5s forwards, blink .75s step-end 5s infinite; }
+
+    /* Fade in tagline */
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .fade-text {
+      opacity: 0;
+      animation: fadein 2s ease-in forwards 7.5s;
+    }
+
+    /* Floating animation */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .float-el { animation: float 4s ease-in-out infinite; }
+    .float-el-delayed { animation: float 4s ease-in-out 2s infinite; }
+  </style>
+
+  <!-- Background Tokyo Night / Dark -->
+  <rect width="100%" height="100%" fill="#1a1b26"/> <!-- Tokyo Night bg -->
+  <!-- Grid overlay -->
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.4" />
+
+  <!-- Cyberpunk side decorations -->
+  <path d="M 0 0 L 30 0 L 50 20 L 50 230 L 30 250 L 0 250" fill="#16161e" stroke="#7aa2f7" stroke-width="2" class="float-el"/>
+  <path d="M 800 0 L 770 0 L 750 20 L 750 230 L 770 250 L 800 250" fill="#16161e" stroke="#bb9af7" stroke-width="2" class="float-el-delayed"/>
+  
+  <line x1="10" y1="20" x2="10" y2="230" stroke="#7aa2f7" stroke-width="2" filter="url(#glow-blue)" />
+  <line x1="790" y1="20" x2="790" y2="230" stroke="#bb9af7" stroke-width="2" filter="url(#glow-purple)" />
+
+  <!-- Main Content inside foreignObject for HTML CSS animation (typing effect) -->
+  <foreignObject x="80" y="30" width="600" height="190">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px;">
+      
+      <div class="typewriter-wrapper l1 text line1" style="max-width: fit-content;">
+        Hi 👋 I'm Duong
+      </div>
+      
+      <div class="typewriter-wrapper l2 text line2" style="max-width: fit-content;">
+        Software Engineering Student
+      </div>
+      
+      <div class="typewriter-wrapper l3 text line3" style="max-width: fit-content;">
+        Java | ASP.NET Core | React
+      </div>
+
+      <div class="tagline fade-text" style="margin-top: 15px;">
+        Building modern web applications with Java, ASP.NET Core and React.
+      </div>
+    </div>
+  </foreignObject>
+
+</svg>
