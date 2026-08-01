@@ -1,9 +1,4 @@
-<!--
-  GitHub Profile README for AlexandorDuongIX
-  Generated automatically with a Tokyo Night / dark cyberpunk theme.
--->
 
-<div align="center">
 
   <!--
     =========================================
@@ -150,4 +145,3 @@
     <img src="https://komarev.com/ghpvc/?username=AlexandorDuongIX&style=flat-square&color=7aa2f7&label=Profile+Views" alt="Profile Views" />
   </p>
 
-</div>
