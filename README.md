@@ -6,10 +6,14 @@
     =========================================
   -->
   <!-- Centered SVG Logo -->
-  <img src="./assets/logo.svg" alt="Logo" width="100" height="100" />
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/AlexandorDuongIX/AlexandorDuongIX/main/assets/logo.svg" alt="Logo" width="100" height="100" />
+  </p>
 
   <!-- Animated SVG Banner -->
-  <img src="./assets/banner.svg" alt="Animated Banner" width="800" />
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/AlexandorDuongIX/AlexandorDuongIX/main/assets/banner.svg" alt="Animated Banner" width="800" />
+  </p>
 
   <br />
   <br />
